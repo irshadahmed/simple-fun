@@ -41,42 +41,11 @@ body {
   font-feature-settings: 'liga';
 }
 
-.navbar {
-  justify-content: flex-start;
-}
 
-.header-bar {
-  display: table;
-  height: 44px;
-  width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
-
-  .nav-links {
-    padding-left: 30px;
-  }
-
-  .brand,
-  .search-box,
-  .nav-links {
-    display: table-cell;
-
-    .form-inline {
-      width: 100%;
-
-      .input-group {
-        width: 100%;
-      }
+.modal {
+  .modal-dialog {
+    .modal-content {
+      
     }
-  }
-
-  .brand {
-    width: 144px;
-  }
-
-  .search-box {}
-
-  .nav-links {
-    width: 40%;
   }
 }
