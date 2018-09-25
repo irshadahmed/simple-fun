@@ -1,0 +1,85 @@
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+  <div class="header-bar">
+    <div class="brand">
+      <a class="navbar-brand" routerLink="/">
+        Simple Fun
+      </a>
+    </div>
+    <div class="search-box">
+      <form class="form-inline">
+        <div class="input-group">
+          <input type="text" class="form-control" aria-label="Text input with dropdown button">
+          <div class="input-group-append">
+            <span class="input-group-text">
+              <i class="material-icons">search</i>
+            </span>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="nav-links">
+      <button class="navbar-toggler" type="button" (click)="isCollapsed = !isCollapsed" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" [ngbCollapse]="isCollapsed">
+        <ul class="navbar-nav mr-auto">
+
+          <li class="nav-item active">
+            <a class="nav-link" (click)="open(content)">Login</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" routerLink="/user-management">User Management</a>
+          </li>
+          <!-- <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown" ngbDropdown>
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" ngbDropdownToggle role="button"
+            aria-haspopup="true" aria-expanded="false">
+            Dropdown
+          </a>
+          <div class="dropdown-menu" ngbDropdownMenu aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Disabled</a>
+        </li> -->
+        </ul>
+      </div>
+    </div>
+    <!-- <div class="nav-links">
+      <div ngbDropdown class="d-inline-block">
+        <button class="btn btn-link" id="dropdownBasic1" ngbDropdownToggle>Hi Irshad</button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <button class="dropdown-item btn btn-link">Action - 1</button>
+          <button class="dropdown-item btn btn-link">Another Action</button>
+          <button class="dropdown-item btn btn-link">Something else is here</button>
+        </div>
+      </div>
+    </div> -->
+  </div>
+  <ng-template #content let-modal>
+    <form>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+      </div>
+      <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </ng-template>
+</nav>

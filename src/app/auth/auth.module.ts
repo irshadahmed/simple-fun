@@ -10,4 +10,8 @@ import { LoginComponent } from './login/login.component';
     ],
     declarations: [LoginComponent]
 })
-export class AuthModule { }
+export class AuthModule {
+    constructor() {
+        console.log('Auth module loaded!!!');
+    }
+}
