@@ -3,6 +3,7 @@ import {
     EventManagerService
 } from '../../core/event-manager.service';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
+import { FormControl } from '@angular/forms';
 @Component({
     selector: 'app-header',
     templateUrl: './header.component.html',
@@ -11,6 +12,8 @@ import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 })
 export class HeaderComponent implements OnInit {
     closeResult: string;
+    public email:FormControl;
+    public password:FormControl;
     constructor(
         private eventManagementSvc: EventManagerService,
         private modalService: NgbModal
@@ -28,6 +31,15 @@ export class HeaderComponent implements OnInit {
         }, (reason) => {
             this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
         });
+    }
+
+    login(form) {
+        console.log(form);
+        if (form.invalid) {
+            return;
+        }
+        const userDetails:any = form.value;
+        console.log(userDetails);
     }
 
     private getDismissReason(reason: any): string {

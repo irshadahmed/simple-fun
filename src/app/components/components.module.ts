@@ -4,10 +4,12 @@ import { CardsComponent } from './cards/cards.component';
 import { HeaderComponent } from './header/header.component';
 import { NgbCollapseModule, NgbModalModule, NgbDatepickerModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
     imports: [
         CommonModule,
+        FormsModule,
         NgbCollapseModule,
         NgbModalModule,
         NgbDatepickerModule,

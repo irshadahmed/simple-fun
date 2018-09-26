@@ -8,7 +8,7 @@ import { HttpResponse } from '@angular/common/http';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
-
+  public error:string;
   constructor(
     private _userSvc: UserService
   ) { }
@@ -26,8 +26,9 @@ export class RegisterComponent implements OnInit {
     });
     this._userSvc.getError().subscribe(() => {
 
-    }, (error: any) => {
+    }, (error: string) => {
       console.log(error);
+      this.error = error;
     })
   }
 
