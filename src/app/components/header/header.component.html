@@ -29,6 +29,11 @@
           <li class="nav-item active">
             <a class="nav-link btn-link" (click)="open(content)">Login</a>
           </li>
+
+          <li class="nav-item active">
+            <a class="nav-link btn-link" [routerLink]="['/users/register']" routerLinkActive="router-link-active" >Register</a>
+          </li>
+
           <li class="nav-item active">
             <a class="nav-link" routerLink="/user-management">User Management</a>
           </li>

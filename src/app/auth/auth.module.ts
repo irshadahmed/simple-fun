@@ -8,7 +8,9 @@ import { LoginComponent } from './login/login.component';
         CommonModule,
         AuthRoutingModule
     ],
-    declarations: [LoginComponent]
+    declarations: [
+        LoginComponent
+    ]
 })
 export class AuthModule {
     constructor() {

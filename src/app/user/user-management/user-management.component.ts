@@ -7,11 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserManagementComponent implements OnInit {
 
-    constructor() {
+    constructor(
+        
+    ) {
         console.log('User Management Component!!!');
     }
 
     ngOnInit() {
+        
     }
 
 }
